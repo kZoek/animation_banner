@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logo Animation</title>
+    <style>
+        .moon{
+            position: absolute;
+            width: 250px;
+            height: 250px;
+            background-image: url('moon.png');
+            background-repeat: no-repeat;
+
+        }
+        .w{
+            background-image: url('w.png');
+        }
+        .o{
+            background-image: url('o.png');
+        }
+        .g{
+            background-image: url('g.png');
+            background-position: center;
+        }
+        .punkt{
+            position: relative;
+            background-image: url('punkt.png');
+            background-position: center;
+            width:300px;
+            height: 100px;
+            top:20px;
+        }
+        .c{
+            background-image: url('c.png');
+        }
+        .h{
+            background-image: url('h.png');
+        }
+        .big{
+            position: absolute;
+            
+            background-position: center;
+            width:300px;
+            height: 140px;
+        }
+        .small{
+            background-position: center;
+            top:55px;
+            position: absolute;
+            width:300px;
+            height:50px;
+        }
+        .text{
+            position: absolute;
+            color:gray;
+            left:140px;
+            top:95px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="logocontainer">
+        <div class="moon"></div>
+        <div class="w big"></div>
+        <div class="o big"></div>
+        <div class="g big"></div>
+        <div class="punkt"></div>
+        <div class="c small"></div>
+        <div class="h small"></div>
+        <div class="text"><p"></p></div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.3.0/TextPlugin.min.js"></script>
+    <script>
+        const wogAnimation = gsap.timeline();
+        wogAnimation
+        .from('.w',{duration:0.5,visibility:'hidden'},0)
+        .from('.w',{duration:1,scale:5},0.5)
+        .from('.o',{duration:0.5,visibility:'hidden'},0.5)
+        .from('.o',{duration:1,scale:5},1)
+        .from('.g',{duration:0.5,visibility:'hidden'},1)
+        .from('.g',{duration:1,scale:5},1.5)
+        .from('.punkt',{duration:0.5,visibility:'hidden'},2)
+        .from('.punkt',{duration:1,scale:5},2)
+        .from('.c',{duration:0.5,visibility:'hidden'},2.5)
+        .from('.c',{duration:1,scale:5},2.5)
+        .from('.h',{duration:0.5,visibility:'hidden'},3)
+        .from('.h',{duration:1,scale:5},3)
+        .from('.moon',{duration:1,opacity:0,x:'30px'})
+        .to('p',{
+            text:'world of games',
+            duration:2
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,129 @@
+/* === Small CSS Reset === */
+*{
+    margin: 0;
+    padding: 0;
+}
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+.banner{
+    position: relative;
+    left:50%;
+    transform: translate(-50%);
+    top:100px;
+    width: 800px;
+    height: 300px;
+    border:solid 5px #30457c;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background: url("images/background.png");
+    background-size: cover;
+    overflow: hidden;
+}
+.text{
+    position: relative;
+    text-align: center;
+    font-size: 5rem;
+    letter-spacing: 0.25rem;
+    color:yellow;
+    text-shadow:0px 0px 1px blue,
+                0px 0px 3px blue,
+                0px 0px 3px blue,
+                0px 0px 3px blue,
+                0px 0px 3px blue,
+                0px 0px 3px blue,
+                0px 0px 3px blue,
+                0px 0px 3px blue;
+}
+.redness{
+    position:absolute;
+    top:0px;
+    left:865px;
+    width: 800px;
+    height: 300px;
+    transform:skew(25deg);
+    background:red;
+}
+.third{
+    top:-230px;
+}
+.pokeball{
+    border-radius:50%;
+    position: relative;
+    top:-350px;
+    left:55px;
+    background-image: url("images/pokeball.png");
+    background-size: cover;
+    width:150px;
+    height: 150px;
+    cursor: pointer;
+}
+.top,.bottom,.bunny,.sobble,.grookey{
+    position: absolute;
+
+    width:100%;
+}
+.grass{
+    top:-480px;
+    left:295px;
+}
+.water{
+    top:-650px;
+    left:520px;
+}
+
+.sobble,.scorbunny,.grookey{
+    width:100%;
+}
+.sword{
+    position: relative;
+    width:140px;
+    height: 200px;
+    transform: rotate(-25deg);
+    box-shadow: 2px 2px 5px black;
+    cursor: pointer;
+}
+.leon{
+    position: relative;
+    top:-905px;
+    left:610px;
+    width:200px;
+}
+.congrats{
+  top:-900px;
+  font-size:3rem;
+  width: 70%;
+  left:150px;
+}
+.shield{
+    position: relative;
+    width:140px;
+    height: 200px;
+    transform: rotate(25deg);
+    box-shadow: 2px 2px 5px black;
+    left:100px;
+    cursor: pointer;
+}
+.sword,.shield{
+    top:-970px;
+}
+.sword >a > img,.shield > a > img{
+    width:100%;
+    height: 100%;
+}
+
+.sword:hover{
+    box-shadow: 3px 3px 9px blue;
+}
+.shield:hover{
+    box-shadow: 3px 3px 9px red;
+}
+
+.hidden{
+    display:none;
+}
+.pokeball:hover{
+    box-shadow: 0 0 25px blue;
+    transform:scale(5);
+}
